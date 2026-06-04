@@ -174,8 +174,6 @@ MINERU_BASE_URL=
 MCP_DASHSCOPE_BASE_URL_STREAMABLE=https://dashscope.aliyuncs.com/api/v1/mcps/WebSearch/mcp
 ```
 
-> 注意：`.env` 不应提交到 GitHub。项目中的 `.gitignore` 已忽略 `.env`、日志、输出目录和本地数据目录。
-
 ### 3. 安装依赖
 
 ```bash
@@ -245,12 +243,6 @@ uvicorn app.query_process.api.query_server:app --host 0.0.0.0 --port 8001
 - 文档图片、结构图、接线图辅助说明
 - 企业内部产品资料检索系统
 
-## 安全说明
-
-- 不要提交 `.env`、API Key、数据库密码或私有 Token。
-- 不要上传本地运行产生的 `logs/`、`output/`、`volumes/`、`milvus/volumes/` 等目录。
-- 如果需要公开演示，请使用 `.env.example` 提供变量模板，真实值仅保存在本地或部署平台的环境变量中。
-- 如果误提交密钥，应立即删除提交记录并在对应平台重置密钥。
 
 ## 后续优化方向
 
@@ -261,6 +253,3 @@ uvicorn app.query_process.api.query_server:app --host 0.0.0.0 --port 8001
 - 增加批量导入和异步任务队列，提升大规模文档处理能力。
 - 增加权限控制和登录鉴权，适配企业内部知识库部署。
 
-## License
-
-本项目当前未指定开源许可证。如需用于商业或二次分发，请先补充明确的 License。
